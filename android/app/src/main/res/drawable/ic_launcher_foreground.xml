@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A road vanishing to the horizon with a pulse line over it. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.95" android:pathData="M46,40h16l12,36h-40z" />
+    <path android:fillColor="#1D5FD0" android:pathData="M52.6,46h2.8l0.6,7h-4zM51.8,58h4.4l0.8,9h-6z" />
+    <path android:strokeColor="#FDBA74" android:strokeWidth="4" android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M30,36h12l5,-9 7,18 5,-9h19" />
+</vector>

@@ -1,0 +1,33 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: roadpulse
+  datasource:
+    # In-memory H2 (PostgreSQL mode) by default; set SPRING_DATASOURCE_URL for PostgreSQL.
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:roadpulse;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE}
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+  mvc:
+    problemdetails:
+      enabled: true
+  jackson:
+    default-property-inclusion: non_null
+
+roadpulse:
+  merge-radius-meters: 150
+  max-reports-per-window: 10
+  rate-window: 10m
+  cleanup-interval: 10m
+  seed-demo-data: ${ROADPULSE_SEED_DEMO:true}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  swagger-ui:
+    path: /docs
